@@ -25,3 +25,17 @@ What happens to program execution when you place the try-catch block inside the 
 In this phase, I updated the Main class to store five different spell names in an array and use a loop to attempt casting each spell. I also added separate catch blocks for ManaLeakException, FizzleException, and the general SpellException class.
 
 I learned that placing the try-catch block inside the loop allows the program to handle each spell individually. If one spell fails, the exception is caught, and the loop continues to the next spell. If the entire loop were inside one try block, an exception could stop the remaining iterations. Handling exceptions inside the loop provides better error recovery because one failed operation does not prevent the others from running.
+
+---
+
+## Phase 3: The Eternal Ledger
+
+**Journal Prompt:**
+
+How did you ensure that your file stream was properly closed even when an exception occurred during writing? What are the key benefits of using try-with-resources over manual closing in a finally block?
+
+**Response:**
+
+In this phase, I added file-writing functionality to record every spell casting attempt in a text file named spell_log.txt. Both successful casts and failed attempts are recorded with the spell name and the corresponding result or exception.
+
+I used a try-with-resources statement to open and close the PrintWriter automatically. This ensures that the file is properly closed even if an exception occurs. I learned that try-with-resources makes resource management easier because it automatically handles closing resources, reduces the amount of code needed, and helps prevent resource leaks compared to manually closing files in a finally block.

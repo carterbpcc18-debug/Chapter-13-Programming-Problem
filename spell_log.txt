@@ -1,0 +1,5 @@
+Arcane Fireball - Casting successful.
+Shadow Bolt - ManaLeakException: Shadow Bolt caused a dangerous mana leak!
+Frost Nova - FizzleException: Frost Nova fizzled during casting!
+Lightning Strike - Casting successful.
+Healing Aura - FizzleException: Healing Aura fizzled during casting!
