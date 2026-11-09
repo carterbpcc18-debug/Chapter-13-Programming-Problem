@@ -39,3 +39,17 @@ How did you ensure that your file stream was properly closed even when an except
 In this phase, I added file-writing functionality to record every spell casting attempt in a text file named spell_log.txt. Both successful casts and failed attempts are recorded with the spell name and the corresponding result or exception.
 
 I used a try-with-resources statement to open and close the PrintWriter automatically. This ensures that the file is properly closed even if an exception occurs. I learned that try-with-resources makes resource management easier because it automatically handles closing resources, reduces the amount of code needed, and helps prevent resource leaks compared to manually closing files in a finally block.
+
+---
+
+## Phase 4: Reading the Omens
+
+**Journal Prompt:**
+
+What did you accomplish in this phase? When reading from an external file, why does the Java compiler require you to handle FileNotFoundException or declare that it is thrown?
+
+**Response:**
+
+In this phase, I added a readLog method to the Main class that reads the contents of spell_log.txt line by line and displays them in the console. I also added a test using a nonexistent filename to make sure the program handles missing files without crashing.
+
+I learned that FileNotFoundException is a checked exception because an external file might not exist or might not be accessible. Java requires the programmer to either handle this exception with a try-catch block or declare it using throws. This helps prevent unexpected program termination and makes file operations more reliable.
