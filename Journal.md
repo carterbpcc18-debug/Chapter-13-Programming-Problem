@@ -53,3 +53,17 @@ What did you accomplish in this phase? When reading from an external file, why d
 In this phase, I added a readLog method to the Main class that reads the contents of spell_log.txt line by line and displays them in the console. I also added a test using a nonexistent filename to make sure the program handles missing files without crashing.
 
 I learned that FileNotFoundException is a checked exception because an external file might not exist or might not be accessible. Java requires the programmer to either handle this exception with a try-catch block or declare it using throws. This helps prevent unexpected program termination and makes file operations more reliable.
+
+---
+
+## Phase 5: Validation & Reflection
+
+**Journal Prompt:**
+
+What issues or edge cases did you discover while testing your program? If you reviewed your work with an AI tutor, what suggestions did it provide, and how did they help you better understand exception handling and file I/O?
+
+**Response:**
+
+During testing, I verified that all five spells were attempted and that the program continued running even when individual spells caused exceptions. I also confirmed that both successful and unsuccessful casting attempts were recorded in spell_log.txt. The program was able to read the casting history and display a friendly error message when attempting to read a file that did not exist.
+
+One important detail I observed was that the spell outcomes are random, so the console output changes each time the program runs. I also learned that using try-catch blocks inside the loop prevents one failed spell from stopping the remaining attempts. Overall, this project helped me better understand custom exceptions, resource management, and how Java handles file input and output.
